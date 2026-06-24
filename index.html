@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        .a {
+            background-color: white;
+            box-shadow: 2px 2px 30px black;
+            width: fit-content;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .faq {
+            background-color: white;
+            box-shadow: 2px 2px 20px black;
+            width: 300px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .fa-question {
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <form action="" class="a">
+        <input type="text" placeholder="Enter your user name">
+        <br><br>
+        <input type="text" placeholder="Enter your password">
+        <br><br>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="hide()">Close</button>
+    </form>
+
+    <br><br><br><br>
+
+    <button onclick="garvit()">Open Form</button>
+
+    
+    <div class="faq" id="faqBox">
+        <h3>Frequently Asked Questions</h3>
+        <p>Q1</p>
+        <p>Q2</p>
+        <p>Q3</p>
+        <button onclick="hideFaq()">Close FAQ</button>
+    </div>
+
+    <br><br>
+
+    
+    <a href="#" onclick="vineet();">
+        <i class="fa-solid fa-question"></i>
+    </a>
+
+    <script>
+        function garvit(){
+            var form_select = document.querySelector('.a')
+            form_select.style.display = 'block'
+        }
+
+        function hide(){
+            var form_select = document.querySelector('.a')
+            form_select.style.display = 'none'
+        }
+
+        function vineet() {
+            var faq = document.querySelector('#faqBox');
+            faq.style.display = 'block';
+        }
+
+        function hideFaq() {
+            var faqBox = document.querySelector('#faqBox');
+            faqBox.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
